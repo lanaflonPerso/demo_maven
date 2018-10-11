@@ -1,6 +1,7 @@
 package com.example.demo.service;
 
 import com.example.demo.repository.AnswerRepository;
+import com.example.demo.repository.AnswerRepositoryTf;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 @Service
 public class AnswerService {
 
-    AnswerRepository answerRepository;
+    AnswerRepositoryTf answerRepository;
 
 
     public AnswerService(AnswerRepository answerRepos){
@@ -18,7 +19,7 @@ public class AnswerService {
 
     public List<String> getAll() {
 
-        return answerRepository.getAll();
+        return answerRepository.findAll();
     }
 
 
